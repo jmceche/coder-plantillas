@@ -1,0 +1,21 @@
+extends layout.pug
+
+block body-content
+  main(class="product-list")
+    h1="Vista de productos"
+    a(href="/productos/submit")="Agregar productos"
+    if products.length
+      table
+        thead
+          th="Nombre"
+          th="Precio"
+          th="Foto"
+        tbody
+          each product in products
+            tr 
+              td=product.title
+              td=product.price
+              td
+                img(src=product.thumbnail , alt="test", class="icon")
+    else
+      h2="No se encontraron productos"

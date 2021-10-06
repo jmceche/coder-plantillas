@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+.product-list h1 {
+  margin-bottom: 1rem;
+}
+
+.product-list h2 {
+  margin-top: 2rem;
+}
+
+img.icon {
+  width: 50px;
+  height: 50px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,th {
+  padding: 1rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background: lightblue;
+  border-color: white;
+  color: #FAFAFA;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: .5rem 0;
+}
+
+.form-input > input {
+  height: 2rem;
+}
+
+.product-form button {
+  background: cadetblue;
+  border: none;
+  color: #FAFAFA;
+  font-weight: bold;
+  padding: .5rem;
+  border-radius: 3px;
+}

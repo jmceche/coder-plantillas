@@ -1,0 +1,25 @@
+{{!-- list.hbs --}}
+<main class="product-list">
+  <h1>Vista de productos</h1>
+  <a href="/productos/submit">Agregar productos</a>
+  {{#if products.length}}
+  <table>
+    <thead>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Foto</th>
+    </thead>
+    <tbody>
+      {{#each products}}
+      <tr>
+          <td>{{this.title}}</td>
+          <td>${{this.price}}</td>
+          <td><img class="icon" src="{{this.thumbnail}}" alt="test"></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <h2>No se encontraron productos</h2>
+  {{/if}}
+</main>

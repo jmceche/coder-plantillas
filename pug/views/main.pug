@@ -1,0 +1,17 @@
+extends layout.pug
+
+block body-content
+  main
+    h1="Ingrese Producto"
+    a(href="/productos")="Ir a listado"
+    form(action="/productos/submit", method="post", class="product-form") 
+      div(class="form-input")
+        label(for="title")="Nombre"
+        input(type="text", name="title") 
+      div(class="form-input")
+        label(for="price")="Precio"
+        input(type="text", name="price") 
+      div(class="form-input")
+        label(for="thumbnail")="Foto URL"
+        input(type="text", name="thumbnail")
+      button(type="submit")="Enviar"

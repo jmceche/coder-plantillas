@@ -1,0 +1,28 @@
+<%- include('layouts/header.ejs'); %>
+
+<main class="product-list">
+  <h1>Vista de productos</h1>
+  <a href="/productos/submit">Agregar productos</a>
+  <% if (products.length) { %>
+  <table>
+    <thead>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Foto</th>
+    </thead>
+    <tbody>
+      <% products.forEach((product) => { %>
+      <tr>
+          <td><%= product.title %></td>
+          <td>$<%= product.price %> </td>
+          <td><img class="icon" src="<%= product.thumbnail %>" alt="test"></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <% } else { %>
+  <h2>No se encontraron productos</h2>
+  <% } %>
+</main>
+
+<%- include('layouts/footer.ejs'); %>
